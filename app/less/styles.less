@@ -1,0 +1,255 @@
+
+@import './_variables.less';
+@import './_responsive.less';
+
+
+body {
+    font-size: 10px;
+    margin: 0;
+    background: url(../../assets/pattern-back.jpg) center fixed repeat;
+    background-size: contain;
+}
+
+
+//
+// Header
+// ____________________
+
+header.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0;
+    border-radius: 5px 5px 0 0;
+    background-color: @color__grey_dark;
+
+    h1 {
+        font-family: @font__primary;
+        font-weight: @font__bold;
+        font-size: 3rem;
+        color: @color__white;
+        text-transform: uppercase;
+        margin: 1rem 0;
+    }
+
+    svg {
+        max-width: 100px;
+        width: 100%;
+        margin-left: 1.2rem;
+    }
+}
+
+
+//
+// Content
+// ____________________
+
+.wrapper.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 10rem;
+    border-radius: 0 0 5px 5px;
+    background-color: @color__grey;
+    box-sizing: border-box;
+
+    .wrapper__filter {
+        width: 100%;
+        text-align: center;
+
+        .input_range {
+            max-width: 200px;
+            width: 100%;
+            margin: 0 auto .5rem;
+
+            .mdc-text-field-helper-text {
+                color: #000000;
+            }
+        }
+
+        .radio_buttons {
+            max-width: 325px;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: 0 auto 1rem;
+
+            .mdc-form-field {
+                margin: 0 .2rem;
+
+                .mdc-radio {    
+                    .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+                        border-color: @color__white;
+                    }
+
+                    .mdc-radio__native-control:enabled:checked+.mdc-radio__background .mdc-radio__outer-circle,
+                    .mdc-radio__native-control:enabled+.mdc-radio__background .mdc-radio__inner-circle {
+                        border-color: @color__violet;
+                    }
+    
+                    .mdc-radio__background::before,
+                    .mdc-radio__ripple::before, 
+                    .mdc-radio__ripple::after {
+                        background-color: @color__violet;
+                    }
+                }
+
+                label {
+                    color: @color__white;
+                }
+            }
+        }
+
+        h2 {
+            font-family: @font__primary;
+            font-weight: @font__bold;
+            font-size: 2.2rem;
+            color: @color__white;
+            margin: 0;
+            padding: 0 0 .5rem;
+        }
+    
+        p {
+            font-family: @font__primary;
+            font-weight: @font__regular;
+            font-size: 1.6rem;
+            color: @color__white;
+            margin: 0 0 1rem;
+        }
+
+        .mdc-touch-target-wrapper {
+            #filter {
+                margin: 0 1rem;
+            }
+        }
+
+        .wrapper__passengers_qty {
+            max-width: 600px;
+            width: 100%;
+            margin: 2rem auto 1rem;
+            position: relative;
+            
+            #progress__title {
+                font-family: @font__primary;
+                font-weight: @font__regular;
+                font-size: 1.2rem;
+                color: @color__white;
+                margin: .5rem 0 1rem;
+            }
+        
+            .progress__background {
+                width: 100%;
+                height: 15px;
+                border-radius: 10px;
+                background-color: @color__white;
+            }
+            
+            #progress__fill {
+                width: 0;
+                height: 15px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 10px;
+                background-color: @color__violet;
+            }
+        }
+    }
+
+    .wrapper__passengers_list {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        margin: 2rem 0 0;
+
+        .wrapper__passanger {
+            max-width: 60%;
+            width: 100%;
+            padding: .7rem 1.2rem;
+            box-sizing: border-box;
+            
+            &:first-child {
+                border-radius: 5px 5px 0 0;
+            }
+            &:last-child {
+                border-radius: 0 0 5px 5px;
+            }
+
+            &.pair {
+                background-color: @color__violet_box_dark;
+            }
+            &.odd {
+                background-color: @color__violet_box_light;
+            }
+
+            h3 {
+                font-family: @font__primary;
+                font-weight: @font__bold;
+                font-size: 1.6rem;
+                color: @color__violet;
+                text-transform: capitalize;
+                margin: 0;
+            }
+            
+            p {
+                font-family: @font__primary;
+                font-weight: @font__regular;
+                font-size: 1.2rem;
+                color: @color__violet;
+                margin: .2rem 0 0;
+            }
+        }
+    }
+}
+
+
+//
+// Footer
+// ____________________
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    box-sizing: border-box;
+
+    .credits {
+        width: auto;
+        display: inherit;
+        flex-flow: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        text-decoration: none;
+        padding: .7rem 1rem;
+        border-radius: 5px;
+        background-color: @color__white;
+        transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        &:hover {
+            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0,0,0,.12);
+        }
+
+        h5 {
+            font-family: @font__primary;
+            font-weight: @font__regular;
+            font-size: 1rem;
+            color: @color__grey_dark;
+            margin: 0;
+        }
+
+        img {
+            max-width: 50px;
+            width: 100%;
+            margin: 0 0 0 .7rem;
+        }
+    }
+}

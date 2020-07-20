@@ -1,0 +1,172 @@
+
+@media screen {
+	@media (min-width: 1200px) {
+		.container {
+			max-width: 1140px;
+		}
+	}
+	
+	@media (min-width: 992px) and (max-width: 1199px) {
+		.container {
+			max-width: 960px;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		.container {
+			max-width: 720px;
+		}
+
+		.wrapper.container {
+			.wrapper__passengers_list {
+				.wrapper__passanger {
+					max-width: 100% !important;
+				}
+			}	
+		} 
+	}
+
+	@media (min-width: 576px) and (max-width: 767px) {
+		.container {
+			max-width: 540px;
+		}
+
+		.wrapper.container {
+			padding: 2rem 3rem !important;
+
+			.wrapper__passengers_list {
+				.wrapper__passanger {
+					max-width: 100% !important;
+				}
+			}	
+		}
+	}
+
+	@media (min-width: 420px) and (max-width: 575px) {
+		.container {
+			max-width: 90%;
+		}
+
+		header.container {
+			h1 {
+				font-size: 2.4rem !important;
+			}
+		}
+
+		.wrapper.container {
+			padding: 2rem 1rem !important;
+
+			.wrapper__filter {
+				h2 {
+					font-size: 1.8rem !important;
+				}
+
+				p {
+					font-size: 1.4rem !important;
+				}
+
+				.wrapper__passengers_qty {
+					#progress__title {
+						font-size: .9rem !important;
+					}
+				}
+			}
+
+			.wrapper__passengers_list {
+				.wrapper__passanger {
+					max-width: 100% !important;
+
+					h3 {
+						font-size: 1.4rem !important;
+					}
+
+					p {
+						font-size: 1rem !important;
+					}
+				}
+			}	
+		}
+
+		footer {
+			justify-content: center !important;
+		}
+	}
+	
+	@media (max-width: 419px) {
+		.container {
+			max-width: 90%;
+		}
+
+		header.container {
+			h1 {
+				font-size: 2.4rem !important;
+			}
+		}
+
+		.wrapper.container {
+			padding: 2rem 1rem !important;
+
+			.wrapper__filter {
+				h2 {
+					font-size: 1.6rem !important;
+				}
+
+				p {
+					font-size: 1.2rem !important;
+				}
+
+				.radio_buttons {
+					flex-flow: column wrap !important;
+				}
+
+				.mdc-touch-target-wrapper {
+					width: 100%;
+					display: inline-flex !important; 
+					flex-flow: column wrap;
+					justify-content: space-between;
+					align-items: center;
+					box-sizing: border-box;
+
+					button {
+						width: 200px;
+
+						&#filter {
+							margin: 1rem 0;
+						}
+					}
+				}
+
+				.wrapper__passengers_qty {
+					#progress__title {
+						font-size: .7rem !important;
+					}
+				}
+			}
+
+			.wrapper__passengers_list {
+				.wrapper__passanger {
+					max-width: 100% !important;
+
+					h3 {
+						font-size: 1.2rem !important;
+					}
+
+					p {
+						font-size: .8rem !important;
+					}
+				}
+			}	
+		}
+
+		footer {
+			justify-content: center !important;
+
+			.credits {
+				img {
+					margin: 1rem 0 0 !important;
+				}
+			}
+		}
+	}
+}
+

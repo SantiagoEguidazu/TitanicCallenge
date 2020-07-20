@@ -1,0 +1,27 @@
+{
+  "name": "challenge-valtech",
+  "version": "1.0.0",
+  "description": "Challenge para la empresa Valtech",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-server": "webpack-dev-server"
+  },
+  "author": "Santiago Eguidazu",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.2.1",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@material/button": "^7.0.0",
+    "@material/form-field": "^7.0.0",
+    "@material/linear-progress": "^7.0.0",
+    "@material/radio": "^7.0.0",
+    "@material/textfield": "^7.0.0"
+  }
+}
